@@ -1,0 +1,49 @@
+---
+title: 'Developing Data Product / Week 4 Course Project'
+author: "Frank Chi"
+date: "May 21, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+This is a presentation of Developing Data Product Course Project / Shiny Application that built to show the performance of processing applications in a day range 
+
+### Data Source  
+* Data was extracted from a company that called "XYZ".
+
+
+## User Interface
+The app uses a few widgets on `sidebarPanel`.
+
+* Date Range selector: created with `dateRangeInput` so that calendars is bring up for user to click on to select dates.  
+* Performance View selector: created with `selectInput` so that a select list is created for user ti choose a single item. Three views are added in View selector:   
+    + Performance Statistics  
+    + CSL Performance  
+    + Application Performance  
+* A reactive text: created with `uiOutput` so a reactive output text will be displayed as HTML within the `sidebarPanel`.
+* A help text: create with `helpText` so a static text `Data From XYZ Company` is added. 
+
+## User View
+
+* Performance Statistics (default)  
+    When the app started, the Performance Statistics is displayed. There two histograms are displayed on `mainPanel`. One histogram presents the total process time of an application, another presents the process time that run on backend. 
+
+* CSL Performance  
+    When user select `CSL Performance` view, the app display a `boxplot` of process time for each application that processed on the backend system in a day with in the selected date range.  
+
+* Application Performance  
+        When user select `Application Performance` view, the app display a `boxplot` of end-to-end process time for each application in a day with in the selected date range. 
+
+
+## Resources
+For the Shiny application please visit
+https://frankchi2003.shinyapps.io/ddpwk4shiny/
+
+For the source code please visit
+https://github.com/frankchi2003/Developing-Data-Products
+
+
